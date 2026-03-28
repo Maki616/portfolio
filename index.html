@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gian Jalandoni | Web Portfolio</title>
-    </head>
-    <body>
-        <h1>Gian Jalandoni</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gian Jalandoni | Web Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="background"></div>
+
+    <header id="Navigator">
+        <p>My Portfolio</p>
+        <div id="Nav">
+            <a href="#">About Me</a>
+            <a href="#">Certificates</a>
+            <a href="#">TechStack</a>
+            <a href="#">Contacts</a>
+        </div>
+    </header>
+
+    <section class="main-page">
+        <div class="main-container">
+            <div class="mp-text">
+                <p>Hi! My name is</p>
+                <h1 id="Name">Gian Jalandoni</h1>
+            </div>
+
+            <img src="C:\Users\202400510\Downloads\profile.jfif" alt="My Profile Picture" class="profile-pic">
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+
+    <script>
+        VANTA.NET({
+            el: "#background",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200,
+            minWidth: 200,
+            scale: 1,
+            scaleMobile: 1,
+            color: 0xffffff,
+            backgroundColor: 0x000000
+        });
+    </script>
+
+</body>
 </html>
