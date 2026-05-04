@@ -1,12 +1,12 @@
-/* ===== GLOBAL ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: white;
+    overflow: hidden;
 }
 
-/* ===== BACKGROUND ===== */
+/* BACKGROUND */
 #background {
     position: fixed;
     top: 0;
@@ -16,7 +16,7 @@ body {
     z-index: -1;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR CONTAINER */
 #Navigator {
     display: flex;
     justify-content: space-between;
@@ -25,9 +25,25 @@ body {
     padding: 15px 40px;
     margin: 20px auto;
     width: 80%;
+    max-width: 1000px;
 
     border: 2px solid white;
     border-radius: 10px;
+}
+
+/* NAV LINKS */
+#Nav {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+
+/* LOGO */
+.logo {
+    margin: 0;
+    font-size: 20px;
+    white-space: nowrap; /* prevents breaking */
 }
 
 .logo {
@@ -53,7 +69,7 @@ a:hover {
     color: rgb(80, 80, 80);
 }
 
-/* ===== MAIN PAGE ===== */
+/* MAIN PAGE */
 .main-page {
     min-height: 100vh;
     display: flex;
@@ -61,7 +77,7 @@ a:hover {
     align-items: center;
 }
 
-/* ===== CARD ===== */
+/* CARD */
 .card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid white;
@@ -83,8 +99,13 @@ a:hover {
     transform: scale(1.05)
 }
 
+.card-link{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
 
-/* ===== PROFILE IMAGE ===== */
+/* PROFILE IMAGE */
 .profile-pic {
     width: 180px;
     height: 180px;
@@ -99,19 +120,50 @@ a:hover {
 }
 
 .profile-pic:hover {
-    transform: scale(1.05);
+    transform: scale(1.25);
 }
 
-/* ===== NAME ===== */
+/* NAME */
 .name {
     font-size: 40px;
     margin: 10px 0;
 }
 
-/* ===== SUBTITLE ===== */
+/* SUBTITLE */
 .subtitle {
     font-size: 18px;
     opacity: 0.8;
+}
+
+/*ABOUT*/
+.about-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* TEXT */
+.about-text h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    position: relative;
+    top: -100px;
+}
+
+.about-text p {
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    
+}
+
+.about-text{
+    position: relative;
+    top: -250px;
+   border: 3px solid rgba(118, 118, 117, 0.761);
+
 }
 
 
@@ -132,7 +184,7 @@ a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* IMPORTANT for responsiveness */
+    flex-wrap: wrap;
     max-width: 900px;
     margin: auto;
 }
@@ -201,7 +253,7 @@ a:hover {
     margin: auto;
 }
 
-/* ITEM */
+/* ITEMS */
 .tech-item {
     background: rgba(52, 52, 52, 0.948);
     border: 1px solid white;
@@ -223,9 +275,7 @@ a:hover {
 
 
 
-
-
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media (max-width: 768px){
 
     .top {
@@ -240,7 +290,7 @@ a:hover {
     .bottom {
         flex-direction: column;
     }
-
+    
     .box{
         width: 100%;
     }
