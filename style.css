@@ -135,6 +135,11 @@ a:hover {
     opacity: 0.8;
 }
 
+
+
+
+
+
 /*ABOUT*/
 .about-page {
     min-height: 100vh;
@@ -143,35 +148,44 @@ a:hover {
     align-items: center;
 }
 
+/* ABOUT CARD */
+.about-text {
+    max-width: 700px;
+    width: 80%;
 
-/* TEXT */
+    padding: 40px;
+
+    border: 3px solid rgba(118, 118, 117, 0.761);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(10px);
+
+    text-align: center;
+}
+
+/* TITLE */
 .about-text h2 {
     font-size: 40px;
-    margin-bottom: 15px;
-    position: relative;
-    top: -100px;
+    margin-bottom: 20px;
 }
 
+/* PARAGRAPHS */
 .about-text p {
-    font-size: 30px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-.about-text{
-    position: relative;
-    top: -250px;
-   border: 3px solid rgba(118, 118, 117, 0.761);
 
-}
 
 
 /*CERTIFICATIONS*/
 
 .certifications {
     text-align: center;
-    padding: 60px 20px;
+    padding: 30px 15px;
 }
 
 .certifications h2 {
@@ -206,8 +220,6 @@ a:hover {
     box-shadow: 0 0 15px white;
 }
 
-
-
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -232,75 +244,144 @@ a:hover {
 }
 
 
-/*TECHSTACK*/
+
+
+
+
+
+
+
+/* ===== TECH STACK ===== */
 .techstack {
     text-align: center;
     padding: 60px 20px;
 }
 
 .techstack h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-size: 40px;
+    margin-bottom: 40px;
 }
 
-/* FLEX CONTAINER */
+/* CONTAINER */
 .tech-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    max-width: 700px;
-    margin: auto;
+    gap: 25px;
 }
 
-/* ITEMS */
-.tech-item {
-    background: rgba(52, 52, 52, 0.948);
+/* CARD */
+.tech-card {
+    width: 140px;
+
+    padding: 25px 20px;
+
+    border-radius: 15px;
     border: 1px solid white;
-    border-radius: 10px;
 
-    padding: 15px 20px;
-    font-weight: bold;
+    background: rgba(255,255,255,0.05);
 
-    min-width: 100px;
-    text-align: center;
+    backdrop-filter: blur(10px);
 
     transition: 0.3s;
+
+    text-align: center;
 }
 
-.tech-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px white;
+/* ICON */
+.tech-card img {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
 }
+
+/* TEXT */
+.tech-card p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* HOVER */
+.tech-card:hover {
+    transform: translateY(-10px) scale(1.05);
+
+    box-shadow: 0 0 20px white;
+}
+
 
 
 
 /* MOBILE */
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-    .top {
+    /* NAVBAR */
+    #Navigator {
         flex-direction: column;
+        gap: 15px;
+
+        width: 90%;
+        padding: 15px;
+    }
+
+    /* NAV LINKS */
+    #Nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+        font-size: 14px;
+    }
+
+    /* LOGO */
+    .logo {
+        font-size: 18px;
         text-align: center;
     }
 
-    .info {
+    /* CARD */
+    .card {
+        width: 85%;
+        padding: 30px 20px;
+    }
+
+    /* PROFILE IMAGE */
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+    }
+
+    /* NAME */
+    .name {
+        font-size: 32px;
+    }
+
+    /* SUBTITLE */
+    .subtitle {
         font-size: 16px;
     }
 
-    .bottom {
-        flex-direction: column;
+    /* ABOUT PAGE */
+    .about-text {
+        width: 85%;
+        padding: 25px;
     }
+
+    .about-text h2 {
+        font-size: 30px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+
+    .cert-card {
+    margin-left: 60px;
+    }
+
+   
+
     
-    .box{
-        width: 100%;
-    }
-
-    .logo{
-        font-size: 15px;
-    }
-    #Nav{
-        font-size: 12px;
-    }
-
-
 }
