@@ -3,7 +3,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: white;
-    overflow: hidden;
+
+  font-family: "M PLUS U", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
 }
 
 /* BACKGROUND */
@@ -41,15 +45,11 @@ body {
 
 /* LOGO */
 .logo {
-    margin: 0;
-    font-size: 20px;
-    white-space: nowrap; /* prevents breaking */
-}
+    text-decoration: none;
+    color: white;
 
-.logo {
-    margin: 0;
-    width: 200px;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 #Nav {
@@ -77,11 +77,17 @@ a:hover {
     align-items: center;
 }
 
+
+
 /* CARD */
 .card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid white;
     border-radius: 15px;
+    position: relative;
+    top: -100px;
+
+    
 
     padding: 40px;
     text-align: center;
@@ -90,7 +96,7 @@ a:hover {
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     transition: 0.3s;
 
-   width: 300px;
+    width: 300px;
    
 }
 
@@ -138,8 +144,6 @@ a:hover {
 
 
 
-
-
 /*ABOUT*/
 .about-page {
     min-height: 100vh;
@@ -152,6 +156,7 @@ a:hover {
 .about-text {
     max-width: 700px;
     width: 80%;
+    margin-bottom: 150px;
 
     padding: 40px;
 
@@ -166,9 +171,16 @@ a:hover {
 }
 
 /* TITLE */
-.about-text h2 {
+#title {
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 40px;
-    margin-bottom: 20px;
+    top: 150px;
+    margin-left: 35px;
+    width: 250px;
+    
 }
 
 /* PARAGRAPHS */
@@ -189,66 +201,22 @@ a:hover {
 }
 
 .certifications h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 45px;
+    margin-bottom: 20px;
 }
 
-/* FLEX CONTAINER */
-.cert-container {
+#cert-container {
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: relative;
+    top: 10px;
     flex-wrap: wrap;
     max-width: 900px;
-    margin: auto;
+    margin: 5px;
 }
-
-/* CARD */
-.cert-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid white;
-    border-radius: 12px;
-    padding: 20px;
-
-    width: 250px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-
-.cert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px white;
-}
-
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.cert-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid white;
-    border-radius: 12px;
-    padding: 20px;
-
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-
-.cert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px white;
-}
-
-#cert-container:hover{
-    transition: 0.5s;
-}
-
-
-
 
 
 /* ===== TECH STACK ===== */
@@ -279,7 +247,7 @@ a:hover {
     border-radius: 15px;
     border: 1px solid white;
 
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.107);
 
     backdrop-filter: blur(10px);
 
@@ -376,8 +344,8 @@ a:hover {
         font-size: 18px;
     }
 
-    .cert-card {
-    margin-left: 60px;
+    #cert-container  {
+    margin-left: 20px;
     }
 
    
