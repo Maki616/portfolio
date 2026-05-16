@@ -12,6 +12,7 @@
             backgroundColor: 0x0
         });
    
+        /*==CERTIFICATIONS==*/
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
 
@@ -23,3 +24,4 @@
     modal.addEventListener("click", () => {
         modal.classList.add("hidden");
     });
+

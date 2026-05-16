@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: white;
+    overflow-y: hidden;
 
   font-family: "M PLUS U", sans-serif;
   font-optical-sizing: auto;
@@ -21,40 +22,39 @@ body {
 }
 
 /* NAVBAR CONTAINER */
+/* ===== NAVBAR ===== */
 #Navigator {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 15px 40px;
     margin: 20px auto;
     width: 80%;
     max-width: 1000px;
-
     border: 2px solid white;
     border-radius: 10px;
 }
 
-/* NAV LINKS */
 #Nav {
     display: flex;
     gap: 20px;
     white-space: nowrap;
 }
 
-
-/* LOGO */
 .logo {
-    text-decoration: none;
-    color: white;
-
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
-#Nav {
-    display: flex;
-    gap: 20px;
+#Nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#Nav a:hover {
+    color: rgb(80, 80, 80);
 }
 
 /* LINKS */
@@ -143,31 +143,46 @@ a:hover {
 
 
 
-
 /*ABOUT*/
 .about-page {
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 120px 20px 50px;
 }
 
-/* ABOUT CARD */
+/* ===== ABOUT CARD ===== */
 .about-text {
-    max-width: 700px;
-    width: 80%;
-    margin-bottom: 150px;
+    max-width: 750px;
+    width: 90%;
+    transform: translateY(-80px);
 
-    padding: 40px;
+    padding: 20px;
 
-    border: 3px solid rgba(118, 118, 117, 0.761);
-    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
 
     background: rgba(255, 255, 255, 0.05);
 
     backdrop-filter: blur(10px);
 
     text-align: center;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+/* ===== PARAGRAPHS ===== */
+.about-text p {
+    font-size: 24px;
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+    color: rgba(255,255,255,0.9);
 }
 
 /* TITLE */
@@ -177,18 +192,12 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
     font-size: 40px;
-    top: 150px;
+    top: 100px;
     margin-left: 35px;
     width: 250px;
     
 }
 
-/* PARAGRAPHS */
-.about-text p {
-    font-size: 22px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
 
 
 
@@ -202,6 +211,8 @@ a:hover {
 
 .certifications h2 {
     font-weight: bold;
+    position: relative;
+    top: -40px;
     font-size: 40px;
     margin-top: 45px;
     margin-bottom: 20px;
@@ -212,7 +223,8 @@ a:hover {
     justify-content: center;
     gap: 20px;
     position: relative;
-    top: 10px;
+    top: -50px;
+    height: fit-content;
     flex-wrap: wrap;
     max-width: 900px;
     margin: 5px;
@@ -226,6 +238,8 @@ a:hover {
 }
 
 .techstack h2 {
+    position: relative;
+    top: -40px;
     font-size: 40px;
     margin-bottom: 40px;
 }
@@ -235,7 +249,7 @@ a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 55px;
 }
 
 /* CARD */
@@ -243,6 +257,8 @@ a:hover {
     width: 140px;
 
     padding: 25px 20px;
+    position: relative;
+    top: -40px;
 
     border-radius: 15px;
     border: 1px solid white;
@@ -277,8 +293,6 @@ a:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 0 20px white;
 }
-
-
 
 
 /* MOBILE */
@@ -334,6 +348,7 @@ a:hover {
     .about-text {
         width: 85%;
         padding: 25px;
+        margin-top: 30px;
     }
 
     .about-text h2 {
@@ -348,7 +363,5 @@ a:hover {
     margin-left: 20px;
     }
 
-   
 
-    
 }
