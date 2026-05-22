@@ -1,14 +1,19 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #121212;
+    background-color: #0a0a0a;
     color: white;
     overflow-x: hidden;
 
-  font-family: "M PLUS U", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 
+    font-family: "M PLUS U", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    min-height: 100vh;
 }
 
 /* BACKGROUND */
@@ -21,347 +26,354 @@ body {
     z-index: -1;
 }
 
-/* NAVBAR CONTAINER */
-/* ===== NAVBAR ===== */
-#Navigator {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 1000px;
-    border: 2px solid white;
-    border-radius: 10px;
-}
-
-#Nav {
-    display: flex;
-    gap: 20px;
-    white-space: nowrap;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
-#Nav a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#Nav a:hover {
-    color: rgb(80, 80, 80);
-}
-
 /* LINKS */
 a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 a:hover {
-    color: rgb(80, 80, 80);
+    color: rgb(160, 160, 160);
 }
 
-/* MAIN PAGE */
+/* NAVBAR */
+#Navigator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 1000px;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.03);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.15), 0 0 40px rgba(255, 255, 255, 0.07);
+}
+
+#Nav {
+    display: flex;
+    gap: 24px;
+    white-space: nowrap;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+#Nav a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+#Nav a:hover {
+    color: rgb(160, 160, 160);
+}
+
+/* MAIN / INDEX PAGE */
 .main-page {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-
-
-/* CARD */
-.card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid white;
-    border-radius: 15px;
-    position: relative;
-    top: -100px;
-
-    
-
-    padding: 40px;
-    text-align: center;
-
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    transition: 0.3s;
-
-    width: 300px;
-   
-}
-
-.card:hover {
-    box-shadow: 0 0 25px rgb(255, 255, 255);
-    transform: scale(1.05)
-}
-
-.card-link{
+/* PROFILE CARD */
+.card-link {
     text-decoration: none;
     color: inherit;
     display: inline-block;
 }
 
+#card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+    padding: 40px 36px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.12), 0 0 50px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.3s, transform 0.3s;
+    width: 300px;
+}
+
+.card:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 70px rgba(255, 255, 255, 0.15);
+    transform: scale(1.04);
+}
+
 /* PROFILE IMAGE */
 .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
-
     border: 3px solid white;
     margin-bottom: 20px;
-
-    box-shadow: 0 0 15px white;
-    transition: 0.3s;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s;
 }
 
 .profile-pic:hover {
-    transform: scale(1.25);
+    transform: scale(1.12);
 }
 
-/* NAME */
+/* NAME & SUBTITLE */
 .name {
-    font-size: 40px;
-    margin: 10px 0;
+    font-size: 36px;
+    margin: 8px 0 4px;
+    font-weight: 800;
 }
 
-/* SUBTITLE */
 .subtitle {
-    font-size: 18px;
-    opacity: 0.8;
+    font-size: 16px;
+    opacity: 0.75;
+    margin: 0;
 }
 
-
-
-/*ABOUT*/
+/* ABOUT PAGE */
 .about-page {
-    min-height: 100vh;
-
+    min-height: calc(100vh - 120px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding: 120px 20px 50px;
+    padding: 20px 20px 60px;
+    gap: 20px;
 }
 
-/* ===== ABOUT CARD ===== */
-.about-text {
-    max-width: 750px;
-    width: 90%;
-    transform: translateY(-80px);
-
-    padding: 20px;
-
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.05);
-
-    backdrop-filter: blur(10px);
-
-    text-align: center;
-
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-
-/* ===== PARAGRAPHS ===== */
-.about-text p {
-    font-size: 24px;
-    line-height: 1.8;
-
-    margin-bottom: 25px;
-
-    color: rgba(255,255,255,0.9);
-}
-
-/* TITLE */
 #title {
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 40px;
-    top: 100px;
-    margin-left: 35px;
-    width: 250px;
-    
+    font-weight: 800;
+    font-size: 38px;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
 }
 
+.about-text {
+    max-width: 900px;
+    width: 90%;
+    padding: 32px 36px;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.12), 0 0 50px rgba(255, 255, 255, 0.05);
+}
 
+.about-text p {
+    font-size: 18px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.88);
+}
 
+.about-text p:last-child {
+    margin-bottom: 0;
+}
 
-
-/*CERTIFICATIONS*/
-
+/* CERTIFICATIONS PAGE */
 .certifications {
     text-align: center;
-    padding: 30px 15px;
+    padding: 20px 20px 60px;
 }
 
 .certifications h2 {
-    font-weight: bold;
-    position: relative;
-    top: -40px;
-    font-size: 40px;
-    margin-top: 45px;
-    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 38px;
+    margin: 20px 0 40px;
 }
 
-#cert-container {
+
+.cert-grid {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    position: relative;
-    top: -50px;
-    height: fit-content;
     flex-wrap: wrap;
-    max-width: 900px;
-    margin: 5px;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 10px;
 }
 
-
-/* ===== TECH STACK ===== */
+/* TECH STACK PAGE */
 .techstack {
     text-align: center;
-    padding: 60px 20px;
+    padding: 20px 20px 60px;
 }
 
 .techstack h2 {
-    position: relative;
-    top: -40px;
-    font-size: 40px;
-    margin-bottom: 40px;
+    font-size: 38px;
+    font-weight: 800;
+    margin: 20px 0 40px;
 }
 
-/* CONTAINER */
 .tech-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 55px;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* CARD */
 .tech-card {
-    width: 140px;
-
-    padding: 25px 20px;
-    position: relative;
-    top: -40px;
-
+    width: 130px;
+    padding: 22px 16px;
     border-radius: 15px;
-    border: 1px solid white;
-
-    background: rgba(255, 255, 255, 0.107);
-
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(10px);
-
-    transition: 0.3s;
-
+    transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.04);
 }
 
-/* ICON */
 .tech-card img {
-    width: 70px;
-    height: 70px;
-
+    width: 64px;
+    height: 64px;
     object-fit: contain;
-
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* TEXT */
 .tech-card p {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
 }
 
-/* HOVER */
 .tech-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 20px white;
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.12);
 }
 
+/* MODAL */
+#imageModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
 
-/* MOBILE */
-@media (max-width: 768px) {
+#imageModal.hidden {
+    display: none;
+}
+
+#modalImg {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.15);
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 900px) {
+    #Navigator {
+        width: 90%;
+        padding: 14px 20px;
+    }
+
+    .tech-container {
+        gap: 20px;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 600px) {
 
     /* NAVBAR */
     #Navigator {
         flex-direction: column;
-        gap: 15px;
-
+        gap: 12px;
         width: 90%;
-        padding: 15px;
-    }
-
-    /* NAV LINKS */
-    #Nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-
-        font-size: 14px;
-    }
-
-    /* LOGO */
-    .logo {
-        font-size: 18px;
+        padding: 14px 16px;
         text-align: center;
     }
 
-    /* CARD */
+    #Nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* INDEX CARD */
     .card {
-        width: 85%;
+        width: 80%;
+        max-width: 320px;
         padding: 30px 20px;
     }
 
-    /* PROFILE IMAGE */
     .profile-pic {
         width: 140px;
         height: 140px;
     }
 
-    /* NAME */
     .name {
-        font-size: 32px;
+        font-size: 28px;
     }
 
-    /* SUBTITLE */
     .subtitle {
-        font-size: 16px;
+        font-size: 14px;
     }
 
-    /* ABOUT PAGE */
-    .about-text {
-        width: 85%;
-        padding: 25px;
-        margin-top: 30px;
-    }
-
-    .about-text h2 {
+    /* ABOUT */
+    #title {
         font-size: 30px;
     }
 
+    .about-text {
+        width: 92%;
+        padding: 24px 18px;
+    }
+
     .about-text p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
-    #cert-container  {
-    margin-left: 20px;
+    /* CERTIFICATIONS */
+    .certifications h2,
+    .techstack h2 {
+        font-size: 30px;
     }
 
+    /* TECH STACK */
+    .tech-container {
+        gap: 16px;
+    }
 
+    .tech-card {
+        width: 100px;
+        padding: 16px 10px;
+    }
+
+    .tech-card img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .tech-card p {
+        font-size: 13px;
+    }
 }

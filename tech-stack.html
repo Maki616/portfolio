@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tech Stack | Gian Jalandoni </title>
+    <title>Tech Stack | Gian Jalandoni</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,97 +12,72 @@
 </head>
 
 <body>
-
-    <!--BACKGROUND-->
     <div id="background"></div>
 
-    <!--NAVBAR-->
     <header id="Navigator">
         <a href="index.html" class="logo">GCJ</a>
-
         <nav id="Nav">
-            <a href="about.html">About </a>
+            <a href="about.html">About</a>
             <a href="certificates.html">Certificates</a>
             <a href="tech-stack.html">Tech Stack</a>
         </nav>
     </header>
 
+    <section class="techstack">
+        <h2>Tech Stack</h2>
 
-    <!-- TECH STACK -->
-<section class="techstack">
+        <div class="tech-container">
 
-    <h2>Tech Stack</h2>
+            <div class="tech-card">
+                <img src="images/Java.png" alt="Java">
+                <p>Java</p>
+            </div>
 
-    <div class="tech-container">
+            <div class="tech-card">
+                <img src="images/C_Programming_Language.png" alt="C">
+                <p>C</p>
+            </div>
 
-        
-        <div class="tech-card">
-            <img src="images/Java.png" alt="Java">
-            <p>Java</p>
+            <div class="tech-card">
+                <img src="images/HTML.webp" alt="HTML">
+                <p>HTML</p>
+            </div>
+
+            <div class="tech-card">
+                <img src="images/CSS.webp" alt="CSS">
+                <p>CSS</p>
+            </div>
+
+            <div class="tech-card">
+                <img src="images/javascript.png" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+
+            <div class="tech-card">
+                <img src="images/Postgresql_elephant.png" alt="PostgreSQL">
+                <p>PostgreSQL</p>
+            </div>
+
+            <div class="tech-card">
+                <img src="images/Git.webp" alt="Git">
+                <p>Git</p>
+            </div>
+
+            <div class="tech-card">
+                <img src="images/github-white-icon.webp" alt="Github">
+                <p>GitHub</p>
+            </div>
+
+            <div class="tech-card">
+                <img src="images/vscode.webp" alt="VS Code">
+                <p>VS Code</p>
+            </div>
+
         </div>
+    </section>
 
-        <div class="tech-card">
-            <img src="images/HTML.webp" alt="HTML">
-            <p>HTML</p>
-        </div>
-
-        <div class="tech-card">
-            <img src="images/CSS.webp" alt="CSS">
-            <p>CSS</p>
-        </div>
-
-         <div class="tech-card">
-            <img src="images/javascript.png" alt="Java Script">
-            <p>Java Script</p>
-        </div> 
-
-        <div class="tech-card">
-            <img src="images/Postgresql_elephant.png" alt="PostgreSQL">
-            <p>PostgreSQL</p>
-        </div>
-        
-
-        <div class="tech-card">
-            <img src="images/Git.webp" alt="Git">
-            <p>Git</p>
-        </div>
-
-        <div class="tech-card">
-            <img src="images/github-white-icon.webp" alt="Github">
-            <p>Github</p>
-        </div>
-
-        <div class="tech-card">
-            <img src="images/vscode.webp" alt="VS code">
-            <p>VS Code</p>
-        </div>
-
-       
-
-    </div>
-
-</section>
-    
-
-
-    <!--BACKGROUND-->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
-
-    <script>
-        VANTA.NET({
-            el: "#background",
-            mouseControls: false,
-            touchControls: false,
-            gyroControls: false,
-            minHeight: 200,
-            minWidth: 200,
-            scale: 1,
-            scaleMobile: 1,
-            color: 0xffffff,
-            backgroundColor: 0x0
-        });
-    </script>
-
+   <script src="script.js"></script>
 </body>
 </html>

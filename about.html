@@ -3,75 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> About Me | Gian Jalandoni </title>
+    <title>About Me | Gian Jalandoni</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
- <!--BACKGROUND-->
+<body>
     <div id="background"></div>
 
-    <!--NAVBAR-->
     <header id="Navigator">
         <a href="index.html" class="logo">GCJ</a>
-
         <nav id="Nav">
-            <a href="about.html">About </a>
+            <a href="about.html">About</a>
             <a href="certificates.html">Certificates</a>
             <a href="tech-stack.html">Tech Stack</a>
         </nav>
     </header>
 
-<!-- ABOUT -->
- 
- <h2 id = "title">About Me </h2>
+    
+    <section class="about-page">
+        <h2 id="title">About Me</h2>
 
-<section class="about-page">
+        <div class="about-text">
+            <p>
+                Hi! I'm Gian Jalandoni. Growing up, I always loved art and drawing, but over time, I became interested in systems and programs and eventually pursued the field of Information Technology.
+                Even though I entered IT, my passion for creativity stayed with me and now inspires the way I design and develop projects.
+            </p>
+            <p>
+                I enjoy designing clean and creative user interfaces for websites and applications.
+                I want to continue developing projects that will allow me to improve both my creativity,
+                problem-solving and coding abilities. I want to experiment with different layouts, styles,
+                and interactive features to make fun projects. Learning new concepts and methods is what motivates
+                me to continue improving every day.
+            </p>
+        </div>
+    </section>
 
-    <div class="about-text">
-
-        <p>
-
-            Hi! I'm Gian Jalandoni. Growing up, I always loved art and drawing, but over time, I became interested in systems and programs and eventually pursued the field of Information Technology.
-             Even though I entered IT, my passion for creativity stayed with me and now inspires the way I design and develop projects.
-        </p>
-
-        <p>
-            I enjoy designing clean and creative user interfaces for websites and applications.
-            I want to continue developing projects that will allow me to improve both my creativity,
-            problem-solving and coding abilities. I want to experiment with different layouts, styles,
-            and interactive features to make fun projects. Learning new concepts and methods is what motivates
-            me to continue improving every day.
-        </p>
-
-    </div>
-
-</section>
-
-    <!--BACKGROUND-->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
-
-    <script>
-        VANTA.NET({
-            el: "#background",
-            mouseControls: false,
-            touchControls: false,
-            gyroControls: false,
-            minHeight: 200,
-            minWidth: 200,
-            scale: 1,
-            scaleMobile: 1,
-            color: 0xffffff,
-            backgroundColor: 0x0
-        });
-    </script>
-
-
+     <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+     <script src="script.js"></script>
 </body>
 </html>
-
