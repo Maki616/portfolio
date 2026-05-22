@@ -111,6 +111,7 @@ a:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.12), 0 0 50px rgba(255, 255, 255, 0.05);
     transition: box-shadow 0.3s, transform 0.3s;
     width: 300px;
+    margin-top: -150px;
 }
 
 .card:hover {
